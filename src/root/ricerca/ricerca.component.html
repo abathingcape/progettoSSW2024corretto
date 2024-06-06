@@ -1,0 +1,12 @@
+
+
+<h2> Ricerca per titolo e autore </h2>
+<input id="valore" (keyup)="ricerca()">
+<p *ngIf="numero > 1"> Ci sono {{numero}} corrispondenze </p>
+<ul *ngIf="numero == 1">
+  <li>{{risultato[0].titolo}}</li>
+  <li>{{risultato[0].autore}}</li>
+  <li>{{risultato[0].posizione}}</li>
+</ul>
+<app-prestito *ngIf="numero == 1" [libri]="libri"[risultato]="risultato"></app-prestito>
+<app-rimozione *ngIf="numero == 1" [libri]="libri" [risultato]="risultato"></app-rimozione>

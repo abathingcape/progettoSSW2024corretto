@@ -1,0 +1,9 @@
+<div *ngIf="risultato[0].possessore==''">
+  <p>Prestito</p>
+  <label for="nominativo">Nominativo: </label>
+  <input id="nominativo" (keyup.enter)="prestito()">
+</div>
+<button *ngIf="risultato[0].possessore != ''" (click)="ritiro()">Restituzione</button>
+<p *ngIf="notifica !=''">{{notifica}}</p>
+<br>
+<br>

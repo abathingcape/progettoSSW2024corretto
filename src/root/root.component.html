@@ -1,0 +1,16 @@
+<div class="home" *ngIf="visibile == 'home'">
+  <h1>Gestione Biblioteca</h1>
+  <button (click)="cambiavista('ricerca')">Ricerca</button>
+  <button (click)="cambiavista('inserimento')">Inserimento</button>
+</div>
+<div class="ricerca" *ngIf="visibile == 'ricerca'">
+  <app-ricerca [libri]="libri"> </app-ricerca>
+  <br>
+  <button (click)="cambiavista('home')">Torna Indietro</button>
+</div>
+<div class="inserimento" *ngIf="visibile == 'inserimento'">
+  <app-inserimento [libri]="libri">
+  </app-inserimento>
+  <br>
+  <button (click)="cambiavista('home')">Torna indietro</button>
+</div>
